@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maxmum-scale=1, user-scalable=no">
   <title>Contato</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <!--Edição por css-->
   <link rel="stylesheet" href="css/styles.css">
+  <!--icons-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script></head>
 <body>
@@ -27,14 +30,14 @@
       <h2>Como podemos te ajudar?</h2>
       <form id="contact-form">
         <label for="name">Nome:</label>
-        <input type="text" name="name" placeholder="Digite seu nome">
+        <input type="text" class = "form-control" id="name" name="name" placeholder="Digite seu nome">
         <label for="email">E-mail:</label>
-        <input type="email" name="email" placeholder="Digite seu e-mail">
+        <input type="email" class = "form-control" id="email" name="email" placeholder="Digite seu e-mail">
         <label for="phone">Telefone:</label>
-        <input type="text" name="phone" placeholder="Digite seu telefone">
+        <input type="text" class = "form-control" name="phone" placeholder="Digite seu telefone">
         <label for="msg">Sua mensagem:</label>
-        <textarea name="msg" cols="30" rows="15" placeholder="Mande sua mensagem"></textarea>
-        <input type="submit" value="Enviar mensagem">
+        <textarea name="msg"  cols="15" rows="4" placeholder="Mande sua mensagem"></textarea>
+        <input type="submit" class="btn card-btn" value="Enviar mensagem">
       </form>
     </div>
   </div>
