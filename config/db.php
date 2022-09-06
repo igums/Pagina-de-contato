@@ -1,12 +1,19 @@
 <?php
 
-$db_host = "localhost";
-$db_name = "pagina_contato";
-$db_user = "root"
-$db_senha = ""
+  $host = "localhost";
+  $dbname = "pagina_contato";
+  $user = "root";
+  $pass = "";
 
-$conn = new PDO("mysql:dbname=". $db_name .";host=". $db_host, $db_user, $db_pass);
+  try {
 
-  // Habilitar erros PDO
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+
+    // Ativar o modo de erros
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+  } catch(PDOException $e) {
+    // erro na conexão
+    $error = $e->getMessage();
+    echo "Erro: $error";
+  }
